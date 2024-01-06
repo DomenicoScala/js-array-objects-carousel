@@ -69,22 +69,26 @@ const allItem = document.querySelectorAll('.slide')
 let imgCounter = 0;
 
 nextButton.addEventListener('click', function(){
+    allItem[imgCounter].classList.remove('active');
     if(imgCounter != allItem.length - 1){
-        allItem[imgCounter].classList.remove('active');
 
         imgCounter++;
 
-        allItem[imgCounter].classList.add('active');
+    }
+    else if(imgCounter == (allItem.length - 1)){
+        imgCounter = 0;
     }
     
+    allItem[imgCounter].classList.add('active');
 })
 
 prevButton.addEventListener('click', function(){
+    allItem[imgCounter].classList.remove('active');
     if(imgCounter > 0){
-        allItem[imgCounter].classList.remove('active');
-
         imgCounter--;
-
-        allItem[imgCounter].classList.add('active');
     }
+    else if(imgCounter == 0){
+        imgCounter = allItem.length - 1;
+    }
+    allItem[imgCounter].classList.add('active');
 })
