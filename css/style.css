@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+.container{
+    max-width: 1000px;
+    flex-grow: 1;
+    -webkit-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 19px 3px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+
+.carosello{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+
+
+.carosello > .elements{
+    width: 100%;
+    height: 100%;
+}
+
+.controls > button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.controls > button#next{
+    right: 10px;
+}
+
+.controls > button#prev{
+    left: 10px;
+}
+
+.carosello > .elements > .slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carosello > .elements > .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.elements > .slide.active{
+    display: block;
+}
+
+.elements > .slide{
+    display: none;
+}
+
+.carosello > .elements > .slide .text{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    text-align:right;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
